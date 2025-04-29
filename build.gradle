@@ -2,8 +2,15 @@ plugins {
     id 'java'
 }
 
-group = 'org.bot'
+group = 'org.kiwimel0n.bot'
 version = '1.0-SNAPSHOT'
+
+task copyPrivate(type: Copy) {
+    copy {
+        from './ValorantStoreBot-private/private'
+        into 'src/main/resources'
+    }
+}
 
 repositories {
     mavenCentral()
